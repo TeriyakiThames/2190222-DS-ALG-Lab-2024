@@ -73,10 +73,7 @@ public class CPTSMachine {
 	}
 
 	public static boolean addStation(String name) {
-		/* FILL CODE */
-		if (!isStationExisted(name)) {
-//			int nextNumber = stationlist.size() + 1;
-//			stationlist.add(new Station(name, nextNumber));    
+		if (!isStationExisted(name)) { 
 			totalStationNumber += 1 ; 
 			Station s = new Station(name , totalStationNumber);
 			stationlist.add(s);
@@ -88,7 +85,6 @@ public class CPTSMachine {
 	}
 
 	public static boolean isStationExisted(String name) {
-		/* FILL CODE */
 		for (Station station : stationlist) {
 			if (station.getName().equals(name)) {
 				return true;
@@ -98,8 +94,6 @@ public class CPTSMachine {
 	}
 
 	public static boolean buyTicket(int type, Station start, Station end) {
-		/* FILL CODE (may not need code here) */
-		
 		if (start == null || end == null || (type < 0 || type > 2) || start == end) {
 			return false;
 			}
@@ -107,7 +101,6 @@ public class CPTSMachine {
 		
 		if (isStationExisted(start.getName()) && isStationExisted(end.getName())
 				&& (type == 0 || type == 1 || type == 2)) {
-			/* FILL CODE */
 			Ticket t = new Ticket(type, start, end);
 			if (t.getStationDistance(start,end) > 6 && type == 2) {
 				return false;
