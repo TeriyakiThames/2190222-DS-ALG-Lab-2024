@@ -29,7 +29,6 @@ public class Ticket {
 	}
 
 	public void setType(int type) {
-		/* FILL CODE */
 		if (type == 0 || type == 1 || type == 2) {
 			this.type = type;
 			if (type == 0 || type == 1) {
@@ -43,15 +42,12 @@ public class Ticket {
 	}
 
 	public void setStation(Station start, Station end) {
-		/* FILL CODE */
 		this.start = start;
 		this.end = end;
 	}
 
 	public double calculatePrice() {
-		/* FILL CODE */
 		int stationDistance = getStationDistance(start, end);
-		// Check for invalid station
 		if (!isStationValid(start, end)) {
 			return -1.0;
 		}
@@ -86,11 +82,9 @@ public class Ticket {
 				typename = "Student";
 				break;
 			case 1:
-				// FILL CODE
 				typename = "Adult";
 				break;
 			case 2:
-				// FILL CODE
 				if (getStationDistance(start, end) <= 6) {
 					typename = "Elderly";
 				} else {
@@ -104,12 +98,10 @@ public class Ticket {
 	}
 
 	public boolean isStationValid(Station start, Station end) {
-		// Check for elderly
 		if (type == 2 && this.getStationDistance(start, end) > 6) {
 			return false;
 		}
 
-		// Check if start and end are the same
 		if (start == end || start.getName().equals(end.getName())) {
 			return false;
 		}
