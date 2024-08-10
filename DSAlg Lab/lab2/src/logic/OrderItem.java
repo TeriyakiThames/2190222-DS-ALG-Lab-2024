@@ -18,7 +18,6 @@ public class OrderItem {
 		}
 	}
 	
-//	TODO Check what returns when itemAmount is less than 0
 	public int calculateTotalPrice() {
 		if (itemAmount > 0) {
 			return itemAmount*item.getPricePerPiece();
