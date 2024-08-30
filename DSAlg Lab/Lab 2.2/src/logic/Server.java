@@ -80,15 +80,16 @@ public class Server {
 	}
 
 	public boolean kickUser(User kicker, User kicked) throws Exception {
+
+		// Credit to Pun 🙏🙏🙏
+
 		boolean kickerIsOwner = kicker.equals(owner);
-		boolean kickedInMember = false;
-		if (memberList.contains(kicked)) {
-			kickedInMember = true;
-		}
+		boolean kickedIsOwner = kicked.equals(owner);
+		boolean kickedInMember = memberList.contains(kicked);
 
 		if (!kickerIsOwner) {
 			throw new Exception();
-		} else if (kickerIsOwner && (kicker.equals(kicked) || kickedInMember)) {
+		} else if (kickerIsOwner && !kickedInMember || kickedIsOwner) {
 			return false;
 		} else {
 			kicked.getJoinedServersList().remove(this);
@@ -99,7 +100,7 @@ public class Server {
 
 	public void setName(String name) {
 		if (name.isBlank()) {
-			name = owner + " home";
+			this.name = owner.getName() + " home";
 			return;
 		}
 		this.name = name;
