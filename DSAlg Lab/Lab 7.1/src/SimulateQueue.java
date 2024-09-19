@@ -11,10 +11,10 @@ public class SimulateQueue {
 
 	public void stateBeforeTimeT(int t) throws Exception {
 		int allQueueIndex = 0;
-		
+
 		// Loop into allEvents
 		for (CustomerInfo[] events : allEvents) {
-			// Inside each event, loop for only t times
+			// Inside each event, loop through it
 			for (int i = 0; i < events.length; i++) {
 				MyQueue currentQueue = allQueues[allQueueIndex];
 				CustomerInfo currentEvent = events[i];
@@ -29,7 +29,7 @@ public class SimulateQueue {
 				if (currentEvent.event == 1) {
 					currentQueue.insertLast(1);
 
-				// If the event is -1, remove first
+					// If the event is -1, remove first
 				} else if (currentEvent.event == -1 && !currentQueue.isEmpty()) {
 					currentQueue.removeFirst();
 				}
