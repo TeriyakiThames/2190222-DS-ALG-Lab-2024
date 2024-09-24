@@ -6,3 +6,4 @@
 
 ## Previous Year's GitHub from Pao²
 [Code from 2023](https://github.com/Unfortunated/Fundamental-Data-Structure-And-Algorithm-Lab)
+[2024's as well!](https://github.com/Unfortunated/Data-Structure-2024)
