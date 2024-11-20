@@ -5,5 +5,5 @@
 - It also allows you to generate a constructor as well, but don't forget to remove `super();` if not inheriting. (`source/Generate Constructors Using Fields ...`)
 
 ## Previous Year's GitHub from Pao²
-[Code from 2023](https://github.com/Unfortunated/Fundamental-Data-Structure-And-Algorithm-Lab)
-[2024's as well!](https://github.com/Unfortunated/Data-Structure-2024)
+- [Code from 2023](https://github.com/Unfortunated/Fundamental-Data-Structure-And-Algorithm-Lab)
+- [2024's as well!](https://github.com/Unfortunated/Data-Structure-2024)
